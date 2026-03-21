@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Bishal Ray</title>
+    <meta name="description" content="Featured machine learning and deep learning projects by Bishal Ray." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-shape bg-shape-1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape-2" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+      <nav class="nav container">
+        <a href="index.html" class="brand">BISHAL RAY</a>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <section class="section container reveal">
+        <div class="section-head">
+          <h2>Featured Projects</h2>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <p class="tag">Machine Learning</p>
+            <h3>Heart Disease Prediction Model</h3>
+            <p>
+              I built a simple yet powerful application that predicts the likelihood of heart disease based on user
+              health parameters. The app is powered by a trained ML model and provides an easy-to-use interface for
+              quick predictions.
+            </p>
+            <p class="project-meta-title">Features</p>
+            <ul class="project-list">
+              <li>Interactive form for patient metrics (age, sex, blood pressure, cholesterol, etc.)</li>
+              <li>Client-side and server-side input validation</li>
+              <li>Offline-trained ML model for probability/class risk prediction</li>
+              <li>Responsive UI for desktop and mobile</li>
+              <li>Prediction details with recommended next steps</li>
+            </ul>
+            <p class="project-meta-title">Tech Stack</p>
+            <ul class="project-list">
+              <li>Frontend: HTML, CSS, JavaScript</li>
+              <li>Backend: Python (Flask)</li>
+              <li>Machine Learning: scikit-learn, joblib</li>
+              <li>Deployment: Render</li>
+            </ul>
+            <a href="https://github.com/BISHAL17048/Heart-Disease-prediction-model" target="_blank" rel="noopener noreferrer" aria-label="Open Heart Disease Prediction Model">View Project</a>
+          </article>
+          <article class="project-card">
+            <p class="tag">Deep Learning</p>
+            <h3>AI Text Summarizer</h3>
+            <p>
+              A simple AI-powered web application that generates concise summaries from long text inputs.
+            </p>
+            <p>
+              Built with Streamlit and my trained model on Hugging Face.
+            </p>
+            <p class="project-meta-title">Key Features</p>
+            <ul class="project-list">
+              <li>Summarize long text into paragraphs or bullet points</li>
+              <li>Choose custom number of bullet points</li>
+              <li>Adjust summary length with a slider</li>
+              <li>Loading spinner for real-time feedback</li>
+              <li>Clean, responsive UI powered by Streamlit</li>
+            </ul>
+            <p class="project-meta-title">Tech Stack</p>
+            <ul class="project-list">
+              <li>Frontend: Streamlit</li>
+              <li>Backend/ML Model: Hugging Face Transformers, PyTorch</li>
+              <li>Data Handling: NumPy, Pandas</li>
+              <li>Deployment: Streamlit Cloud</li>
+            </ul>
+            <a href="https://github.com/BISHAL17048/AI-Text-Summarizer" target="_blank" rel="noopener noreferrer" aria-label="Open AI Text Summarizer">View Project</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer container">
+      <p>&copy; <span id="year"></span> Bishal Ray. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+    // Theme toggle logic
+    const toggleBtn = document.getElementById('theme-toggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      document.documentElement.classList.add('dark-mode');
+      toggleBtn.textContent = '☀️';
+    }
+    toggleBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark-mode');
+      const isDark = document.documentElement.classList.contains('dark-mode');
+      toggleBtn.textContent = isDark ? '☀️' : '🌙';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+    </script>
+  </body>
+</html>
