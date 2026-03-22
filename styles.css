@@ -246,9 +246,9 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 58% 24%;
-  transform: scale(1.34);
-  transform-origin: 58% 24%;
+  object-position: center 15%;
+  transform: scale(1.1);
+  transform-origin: center top;
 }
 
 .photo-missing {
@@ -642,9 +642,9 @@ h1 span {
   }
 
   .hero-photo {
-    object-position: 56% 22%;
-    transform: scale(1.28);
-    transform-origin: 56% 22%;
+    object-position: center 15%;
+    transform: scale(1.1);
+    transform-origin: center top;
   }
 
   .projects-grid {
@@ -689,9 +689,9 @@ h1 span {
   }
 
   .hero-photo {
-    object-position: 54% 20%;
-    transform: scale(1.22);
-    transform-origin: 54% 20%;
+    object-position: center 15%;
+    transform: scale(1.1);
+    transform-origin: center top;
   }
 
   .skills-grid {
